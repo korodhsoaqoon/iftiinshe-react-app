@@ -1,6 +1,7 @@
 import CourseListing from "./CourseListing";
 import courses from "../courses.json";
 const CourseListings = () => {
+  const recentCourses = courses.slice(0, 3);
   return (
     <>
       <section className="bg-blue-50 px-4 py-10">
@@ -10,7 +11,7 @@ const CourseListings = () => {
           </h1>
           {/* <!-- Courses grid --> */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {courses.map((course) => (
+            {recentCourses.map((course) => (
               <CourseListing course={course} key={course.id} />
             ))}
           </div>

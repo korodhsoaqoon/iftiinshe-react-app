@@ -1,47 +1,13 @@
 import logo from "./assets/logo.png";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import HomeCards from "./components/HomeCards";
 const App = () => {
   return (
     <div>
       <NavBar />
       <Hero />
-      {/* <!-- Students and Instructors --> */}
-      <section className="py-4">
-        <div className="container-xl lg:container m-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 rounded-lg">
-            {/* <!-- learners card --> */}
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <h1 className="text-2xl font-bold">For Learners</h1>
-              <p className="mt-2 mb-4">
-                Browse our courses and start learning today
-              </p>
-              <a
-                className="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700"
-                href="courses.html"
-              >
-                Browse Courses
-              </a>
-            </div>
-
-            {/* <!-- instructors --> */}
-            <div className="bg-indigo-100 p-6 rounded-lg shadow-md">
-              <h1 className="text-2xl font-bold">For Instructors</h1>
-              <p className="mt-2 mb-4">
-                Browse our courses and start learning today
-              </p>
-              <a
-                className="inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-gray-700"
-                href="add-course.html"
-              >
-                Add Course
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* <!--Recent Courses --> */}
+      <HomeCards />
       <section className="bg-blue-50 px-4 py-10">
         <div className="container-xl lg:container m-auto">
           <h1 className="text-3xl font-bold text-center text-indigo-500 mb-6">

@@ -1,4 +1,11 @@
+import { useState } from "react";
 const CourseListing = ({ course }) => {
+  const [showFullDescription, setShowFullDescription] = useState(false);
+  let description = course.description;
+
+  if (!showFullDescription) {
+    description = description.substring(0, 130) + "....";
+  }
   return (
     <>
       <div className="bg-white rounded-xl shadow-md relative">
@@ -7,7 +14,13 @@ const CourseListing = ({ course }) => {
             <div className="text-gray-600 my-2">{course.type}</div>
             <h3 className="text-xl font-bold">{course.title}</h3>
           </div>
-          <div className="mb-5">{course.description}</div>
+          <div className="mb-5">{description}</div>
+          <button
+            onClick={() => setShowFullDescription(!showFullDescription)}
+            className="mb-5 text-indigo-500"
+          >
+            {showFullDescription ? "Less" : "More"}
+          </button>
           <div className="flex justify-between mb-5">
             <h3 className="text-indigo-500">Duration: {course.duration}</h3>
             <h3 className="text-indigo-500">Price: {course.price}</h3>

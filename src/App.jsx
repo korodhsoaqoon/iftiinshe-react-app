@@ -5,6 +5,7 @@ import CoursesPage from "./pages/CoursesPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddCoursePage from "./pages/AddCoursePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CourseDetailsPage from "./pages/CourseDetailsPage";
 const App = () => {
   return (
     <div>
@@ -13,7 +14,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses/:id" element={<CourseDetailsPage />} />
           <Route path="/add-course" element={<AddCoursePage />} />
+
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>

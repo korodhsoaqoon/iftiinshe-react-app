@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaCode } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 const CourseListing = ({ course }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
   let description = course.description;
@@ -32,12 +33,12 @@ const CourseListing = ({ course }) => {
               <FaCode className="text-xl " />{" "}
               <span className="font-semibold">{course.technology}</span>
             </div>
-            <a
+            <NavLink
               className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 flex items-center justify-center rounded-lg"
-              href="/course.html"
+              to={`/courses/${course.id}`}
             >
               Read More
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

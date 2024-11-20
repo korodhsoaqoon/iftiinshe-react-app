@@ -1,4 +1,6 @@
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <>
@@ -7,34 +9,34 @@ const NavBar = () => {
           <div className="h-20 flex items-center justify-center">
             <div className="flex items-center flex-1 justify-center md:items-stretch md:justify-start">
               {/* <!-- logo --> */}
-              <a className="flex items-center" href="index.html">
+              <Link className="flex items-center" to="/">
                 <img className="h-10 w-auto" src={logo} alt="" />
                 <span className="hidden md:block ml-2 font-bold text-2xl text-white">
                   Iftiinshe
                 </span>
-              </a>
+              </Link>
 
               {/* <!-- Menu --> */}
               <div className="ml-2 md:ml-auto">
                 <div className="flex space-x-2 items-center">
-                  <a
+                  <Link
                     className="text-white bg-black hover:bg-gray-900 hover:text-white rounded py-2 px-3"
-                    href="/"
+                    to="/"
                   >
                     Home
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="text-white hover:bg-gray-900 hover:text-white rounded py-2 px-3"
-                    href="/courses"
+                    to="/courses"
                   >
                     Courses
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="text-white hover:bg-gray-900 hover:text-white rounded py-2 px-3"
-                    href="/add-course.html"
+                    to="/add-course"
                   >
                     Add Course
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import Card from "./Card";
+import { Link } from "react-router-dom";
 const HomeCards = () => {
   return (
     <>
@@ -10,24 +11,24 @@ const HomeCards = () => {
               <p className="mt-2 mb-4">
                 Browse our courses and start learning today
               </p>
-              <a
+              <Link
                 className="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700"
-                href="courses.html"
+                to="/courses"
               >
                 Browse Courses
-              </a>
+              </Link>
             </Card>
             <Card bg="bg-indigo-100">
               <h1 className="text-2xl font-bold">For Instructors</h1>
               <p className="mt-2 mb-4">
                 Browse our courses and start learning today
               </p>
-              <a
+              <Link
                 className="inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-gray-700"
-                href="add-course.html"
+                to="/add-course"
               >
                 Add Course
-              </a>
+              </Link>
             </Card>
           </div>
         </div>

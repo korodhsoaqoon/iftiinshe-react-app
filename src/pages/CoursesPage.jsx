@@ -1,5 +1,10 @@
+import CourseListings from "../components/CourseListings";
 const CoursesPage = () => {
-  return <div>Courses</div>;
+  return (
+    <>
+      <CourseListings isHome={false} />
+    </>
+  );
 };
 
 export default CoursesPage;

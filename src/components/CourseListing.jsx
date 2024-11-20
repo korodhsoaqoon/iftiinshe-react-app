@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaCode } from "react-icons/fa";
 const CourseListing = ({ course }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
   let description = course.description;
@@ -27,8 +28,9 @@ const CourseListing = ({ course }) => {
           </div>
           <div className="border border-gray-100 mb-5"></div>
           <div className="flex flex-col lg:flex-row justify-between mb-4">
-            <div className="text-orange-700 mb-3">
-              <i className="fa-solid fa-code"></i> {course.technology}
+            <div className="text-orange-700 mb-3 flex gap-3 items-center">
+              <FaCode className="text-xl " />{" "}
+              <span className="font-semibold">{course.technology}</span>
             </div>
             <a
               className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 flex items-center justify-center rounded-lg"

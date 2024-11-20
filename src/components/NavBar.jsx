@@ -19,13 +19,13 @@ const NavBar = () => {
                 <div className="flex space-x-2 items-center">
                   <a
                     className="text-white bg-black hover:bg-gray-900 hover:text-white rounded py-2 px-3"
-                    href="/index.html"
+                    href="/"
                   >
                     Home
                   </a>
                   <a
                     className="text-white hover:bg-gray-900 hover:text-white rounded py-2 px-3"
-                    href="/courses.html"
+                    href="/courses"
                   >
                     Courses
                   </a>

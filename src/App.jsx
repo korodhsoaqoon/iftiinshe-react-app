@@ -1,17 +1,17 @@
-import logo from "./assets/logo.png";
 import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import HomeCards from "./components/HomeCards";
-import CourseListings from "./components/CourseListings";
-import ViewAllCourses from "./components/ViewAllCourses";
+
+import HomePage from "./pages/HomePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
     <div>
       <NavBar />
-      <Hero />
-      <HomeCards />
-      <CourseListings />
-      <ViewAllCourses />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/courses" element={<h1>Courses Page</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

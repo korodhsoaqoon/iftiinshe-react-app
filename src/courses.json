@@ -10,7 +10,7 @@
       "price": "10",
       "instructor": {
         "name": "Mohamed Abdillahi",
-        "description": "NewTek Solutions is a leading technology instructor specializing in web development and digital solutions. We pride ourselves on delivering high-quality products and services to our clients while fostering a collaborative and innovative work environment.",
+        "description": "An experienced web developer with expertise in crafting responsive and user-friendly websites. Mohamed has a passion for teaching HTML and CSS through practical, real-world projects.",
         "contactEmail": "contact@teksolutions.com",
         "contactPhone": "555-555-5555"
       }
@@ -25,7 +25,7 @@
       "price": "15",
       "instructor": {
         "name": "Abdillahi Haji",
-        "description": ".....",
+        "description": "A skilled database engineer with years of experience in managing complex database systems. Abdillahi specializes in teaching SQL with a focus on practical applications and efficiency.",
         "contactPhone": "555-555-5555"
       }
     },
@@ -39,7 +39,7 @@
       "price": "20",
       "instructor": {
         "name": "Fatima Mouse",
-        "description": "Dolor Cloud is a leading technology instructor specializing in digital solutions for businesses of all sizes. With a focus on innovation and customer satisfaction, we are committed to delivering cutting-edge products and services.",
+        "description": "A backend developer with a deep understanding of Node.js and Express. Fatima excels at breaking down complex concepts and guiding students through building scalable backend solutions.",
         "contactEmail": "contact@dolorsitamet.com",
         "contactPhone": "555-555-5555"
       }
@@ -54,7 +54,7 @@
       "price": "10",
       "instructor": {
         "name": "Mahdi Moalim",
-        "description": "Alpha Elite is a dynamic startup specializing in digital marketing and web development. We are committed to fostering a diverse and inclusive workplace where creativity and innovation thrive.",
+        "description": "An accomplished mobile developer with a knack for creating cross-platform apps. Mahdi is dedicated to teaching Dart and Flutter with a focus on real-world development.",
         "contactEmail": "contact@adipisicingelit.com",
         "contactPhone": "555-555-5555"
       }
@@ -69,7 +69,7 @@
       "price": "20",
       "instructor": {
         "name": "Jamma Abdi",
-        "description": "Browning Technologies is a rapidly growing technology instructor specializing in e-commerce solutions. We offer a dynamic and collaborative work environment where employees are encouraged to think creatively and innovate.",
+        "description": "A React specialist with extensive experience in developing dynamic, single-page applications. Jamma loves helping students master React's powerful features.",
         "contactEmail": "contact@consecteturadipisicing.com",
         "contactPhone": "555-555-5555"
       }
@@ -79,13 +79,12 @@
       "title": "MongoDB",
       "type": "Database",
       "description": "Keen to explore MongoDB? Our hands-on course will introduce you to the world of NoSQL databases and teach you how to manage data effectively using MongoDB. You'll learn how to store, query, and update data in a flexible, scalable way. Discover how to design and structure databases for modern applications, and understand how MongoDB integrates with popular backend technologies like Node.js. By the end of the course, you'll be equipped to build data-driven apps that handle large volumes of unstructured data efficiently. Start mastering MongoDB today!",
-
       "technology": "MongoDb, Mongoose..",
       "duration": "1 Month",
       "price": "15",
       "instructor": {
         "name": "Zamzam Hassan",
-        "description": "Port Solutions is a leading technology instructor specializing in software development and digital marketing. We are committed to providing our clients with cutting-edge solutions and our employees with a supportive and rewarding work environment.",
+        "description": "A NoSQL expert with a deep understanding of MongoDB's capabilities. Zamzam is passionate about helping students design and implement modern database solutions.",
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }

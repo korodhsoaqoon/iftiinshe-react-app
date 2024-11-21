@@ -1,10 +1,48 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const AddCoursePage = () => {
+  const [type, setType] = useState("Front End");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [duration, setDuration] = useState("");
+  const [technology, setTechnology] = useState("");
+  const [price, setPrice] = useState("");
+  const [name, setName] = useState("");
+  const [bio, setBio] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactPhone, setContactPhone] = useState("");
+
+  const navigate = useNavigate();
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    const newCourse = {
+      title,
+      type,
+      description,
+      duration,
+      technology,
+      price,
+      instructor: {
+        name,
+        description: bio,
+        contactEmail,
+        contactPhone,
+      },
+    };
+
+    const res = await fetch("http://localhost:5000/courses", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newCourse),
+    });
+    return navigate("/courses");
+  };
   return (
     <>
       <section className="bg-indigo-100">
         <div className="container m-auto max-w-2xl py-24">
           <div className="bg-white px-6 py-8 shadow-md rounded-md border mt-4 md:m-0">
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <h2 className="text-3xl text-center font-semibold mb-6">
                 Add Course
               </h2>
@@ -20,11 +58,13 @@ const AddCoursePage = () => {
                   name="type"
                   id="type"
                   required
+                  value={type}
+                  onChange={(e) => setType(e.target.value)}
                 >
-                  <option value="full-stack">Full Stack</option>
-                  <option value="front-end">Front End</option>
-                  <option value="back-end">Back End</option>
-                  <option value="database">Database</option>
+                  <option value="Full Stack">Full Stack</option>
+                  <option value="Front End">Front End</option>
+                  <option value="Back End">Back End</option>
+                  <option value="Database">Database</option>
                 </select>
               </div>
               <div className="mb-4">
@@ -40,6 +80,8 @@ const AddCoursePage = () => {
                   id="title"
                   placeholder="eg. React Course"
                   required
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -54,6 +96,8 @@ const AddCoursePage = () => {
                   rows="4"
                   placeholder="Add your course description, ...."
                   id="description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </div>
 
@@ -70,6 +114,8 @@ const AddCoursePage = () => {
                   id="duration"
                   placeholder="eg. 1 month."
                   required
+                  value={duration}
+                  onChange={(e) => setDuration(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -85,6 +131,8 @@ const AddCoursePage = () => {
                   id="technlogies"
                   placeholder="eg. html, css ...."
                   required
+                  value={technology}
+                  onChange={(e) => setTechnology(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -100,6 +148,8 @@ const AddCoursePage = () => {
                   id="price"
                   placeholder="eg. $ 10"
                   required
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
               <h3 className="text-2xl mb-5">Instructor Info</h3>
@@ -116,6 +166,8 @@ const AddCoursePage = () => {
                   id="name"
                   placeholder="eg. Abdillahi, "
                   required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -129,6 +181,8 @@ const AddCoursePage = () => {
                   className="border rounded w-full py-2 px-3 mb-2"
                   name="Bio"
                   id="bio"
+                  value={bio}
+                  onChange={(e) => setBio(e.target.value)}
                 ></textarea>
               </div>
 
@@ -145,6 +199,8 @@ const AddCoursePage = () => {
                   id="email"
                   placeholder="eg. example@gmail.com "
                   required
+                  value={contactEmail}
+                  onChange={(e) => setContactEmail(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -160,6 +216,8 @@ const AddCoursePage = () => {
                   id="phone"
                   placeholder="eg. +252 63 00000000 "
                   required
+                  value={contactPhone}
+                  onChange={(e) => setContactPhone(e.target.value)}
                 />
               </div>
               <div>

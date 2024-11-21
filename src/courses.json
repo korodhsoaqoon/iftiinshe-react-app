@@ -88,6 +88,66 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "4cc7",
+      "title": "MERN Stack",
+      "type": "Full Stack",
+      "description": "Demo Course Description...",
+      "duration": "6",
+      "technology": "html, css, js, react, mongo, express",
+      "price": "68",
+      "instructor": {
+        "name": "Hassan Mohamed",
+        "description": "mern stack developer....",
+        "contactEmail": "hassan@email.com",
+        "contactPhone": "+252 61 5868988"
+      }
+    },
+    {
+      "id": "a7e5",
+      "title": "PostgreSQL",
+      "type": "Database",
+      "description": "course description",
+      "duration": "3",
+      "technology": "PostgreSQL",
+      "price": "40",
+      "instructor": {
+        "name": "Hamda Ali",
+        "description": "Database Designer and developer",
+        "contactEmail": "hamda@email.com",
+        "contactPhone": "5454566645"
+      }
+    },
+    {
+      "id": "0fb2",
+      "title": "PostgreSQL",
+      "type": "Database",
+      "description": "course description",
+      "duration": "3",
+      "technology": "PostgreSQL",
+      "price": "40",
+      "instructor": {
+        "name": "Hamda Ali",
+        "description": "Database Designer and developer",
+        "contactEmail": "hamda@email.com",
+        "contactPhone": "5454566645"
+      }
+    },
+    {
+      "id": "be71",
+      "title": "DJango",
+      "type": "Back End",
+      "description": "Description....",
+      "duration": "1 month",
+      "technology": "Python, DJango",
+      "price": "20",
+      "instructor": {
+        "name": "Hassan Mohamed",
+        "description": "Python developer...",
+        "contactEmail": "hassan@email.com",
+        "contactPhone": "4545454545"
+      }
     }
   ]
 }

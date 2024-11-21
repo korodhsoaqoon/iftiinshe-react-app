@@ -103,51 +103,6 @@
         "contactEmail": "hassan@email.com",
         "contactPhone": "+252 61 5868988"
       }
-    },
-    {
-      "id": "a7e5",
-      "title": "PostgreSQL",
-      "type": "Database",
-      "description": "course description",
-      "duration": "3",
-      "technology": "PostgreSQL",
-      "price": "40",
-      "instructor": {
-        "name": "Hamda Ali",
-        "description": "Database Designer and developer",
-        "contactEmail": "hamda@email.com",
-        "contactPhone": "5454566645"
-      }
-    },
-    {
-      "id": "0fb2",
-      "title": "PostgreSQL",
-      "type": "Database",
-      "description": "course description",
-      "duration": "3",
-      "technology": "PostgreSQL",
-      "price": "40",
-      "instructor": {
-        "name": "Hamda Ali",
-        "description": "Database Designer and developer",
-        "contactEmail": "hamda@email.com",
-        "contactPhone": "5454566645"
-      }
-    },
-    {
-      "id": "be71",
-      "title": "DJango",
-      "type": "Back End",
-      "description": "Description....",
-      "duration": "1 month",
-      "technology": "Python, DJango",
-      "price": "20",
-      "instructor": {
-        "name": "Hassan Mohamed",
-        "description": "Python developer...",
-        "contactEmail": "hassan@email.com",
-        "contactPhone": "4545454545"
-      }
     }
   ]
 }

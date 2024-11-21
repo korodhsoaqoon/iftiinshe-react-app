@@ -22,6 +22,15 @@ const CourseDetailsPage = () => {
     };
     fetchCourse();
   }, []);
+
+  // delete
+  const handleDelete = async () => {
+    const res = await fetch(`http://localhost:5000/courses/${id}`, {
+      method: "DELETE",
+    });
+    return;
+  };
+
   return (
     <>
       {loading ? (
@@ -98,12 +107,12 @@ const CourseDetailsPage = () => {
                   >
                     Edit Course
                   </a>
-                  <a
-                    className="bg-red-600 hover:bg-red-700 text-white text-center font-bold py-2 px-4 rounded-full focus:outline-one focus:shadow-outline mt-4 block"
-                    href="#"
+                  <button
+                    onClick={handleDelete}
+                    className="bg-red-600 w-full hover:bg-red-700 text-white text-center font-bold py-2 px-4 rounded-full focus:outline-one focus:shadow-outline mt-4 block"
                   >
                     Delete Course
-                  </a>
+                  </button>
                 </div>
               </aside>
             </div>

@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import Spinner from "../components/Spinner";
 import { useParams, Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 const CourseDetailsPage = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  const navigate = useNavigate();
   console.log(id);
   useEffect(() => {
     const fetchCourse = async () => {
@@ -25,10 +26,12 @@ const CourseDetailsPage = () => {
 
   // delete
   const handleDelete = async () => {
+    const confirm = window.confirm("Are you sure to delete this course?");
+    if (!confirm) return;
     const res = await fetch(`http://localhost:5000/courses/${id}`, {
       method: "DELETE",
     });
-    return;
+    return navigate("/courses");
   };
 
   return (

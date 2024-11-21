@@ -88,21 +88,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "4cc7",
-      "title": "MERN Stack",
-      "type": "Full Stack",
-      "description": "Demo Course Description...",
-      "duration": "6",
-      "technology": "html, css, js, react, mongo, express",
-      "price": "68",
-      "instructor": {
-        "name": "Hassan Mohamed",
-        "description": "mern stack developer....",
-        "contactEmail": "hassan@email.com",
-        "contactPhone": "+252 61 5868988"
-      }
     }
   ]
 }

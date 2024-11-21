@@ -3,6 +3,7 @@ import Spinner from "../components/Spinner";
 import { useParams, Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const CourseDetailsPage = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -31,6 +32,7 @@ const CourseDetailsPage = () => {
     const res = await fetch(`http://localhost:5000/courses/${id}`, {
       method: "DELETE",
     });
+    toast.success("Course Deleted Successfully");
     return navigate("/courses");
   };
 

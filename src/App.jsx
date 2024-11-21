@@ -1,5 +1,6 @@
 import NavBar from "./components/NavBar";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,6 +20,7 @@ const App = () => {
 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </div>
   );

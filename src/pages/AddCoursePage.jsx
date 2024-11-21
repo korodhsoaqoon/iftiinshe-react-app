@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const AddCoursePage = () => {
   const [type, setType] = useState("Front End");
   const [title, setTitle] = useState("");
@@ -35,6 +36,7 @@ const AddCoursePage = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newCourse),
     });
+    toast.success("Course Added Successfully");
     return navigate("/courses");
   };
   return (

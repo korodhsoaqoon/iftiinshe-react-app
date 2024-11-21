@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
 import Spinner from "../components/Spinner";
+import { useParams, Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+
 const CourseDetailsPage = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { id } = useParams();
+  console.log(id);
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const res = await fetch("http://localhost:5000/courses/3");
+        const res = await fetch(`http://localhost:5000/courses/${id}`);
         const data = await res.json();
         setCourse(data);
       } catch (error) {
@@ -25,12 +30,15 @@ const CourseDetailsPage = () => {
         <>
           <section>
             <div className="container m-auto p-6">
-              <a
+              <Link
                 className="text-indigo-500 hover:text-indigo-600"
-                href="/courses.html"
+                to="/courses"
               >
-                <i className="fas fa-arrow-left mr-2"></i> Back to Courses
-              </a>
+                <div className="flex gap-2 items-center">
+                  <FaArrowLeft />
+                  Back to Courses
+                </div>
+              </Link>
             </div>
           </section>
 
@@ -57,7 +65,7 @@ const CourseDetailsPage = () => {
                       Duration : {course.duration}
                     </h3>
                     <h3 className="text-indigo-500 mb-2 font-semibold">
-                      Price : {course.price}
+                      Price : $ {course.price}
                     </h3>
                   </div>
                 </div>
